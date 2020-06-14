@@ -1,0 +1,909 @@
+09:17:52.146 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderAction - Could not create an Appender of type [ch.gos.logback.core.ConsoleAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.gos.logback.core.ConsoleAppender
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@8:73 - ActionException in Action for tag [appender] ch.qos.logback.core.joran.spi.ActionException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.gos.logback.core.ConsoleAppender
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG_FILE] - No encoder set for the appender named "DEBUG_FILE".
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at ru.basanov.subscriber.SubscriberApplication.main(SubscriberApplication.java:10)
+09:19:43.187 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ru.basanov.subscriber.SubscriberApplicationTests], using SpringBootContextLoader
+09:19:43.202 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [ru.basanov.subscriber.SubscriberApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:19:43.203 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [ru.basanov.subscriber.SubscriberApplicationTests]: SubscriberApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:19:43.680 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration ru.basanov.subscriber.SubscriberApplication for test class ru.basanov.subscriber.SubscriberApplicationTests
+09:19:43.766 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+09:19:43.834 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5276d6ee, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71687585, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1807f5a7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1b919693, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7fb4f2a9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4dc27487, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6a4f1a55, org.springframework.test.context.event.EventPublishingTestExecutionListener@7dfd3c81, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2584b82d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7bbc8656, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6933b6c6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7d3e8655, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7dfb0c0f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@626abbd0]
+09:19:54.163 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderAction - Could not create an Appender of type [ch.gos.logback.core.ConsoleAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.gos.logback.core.ConsoleAppender
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@8:73 - ActionException in Action for tag [appender] ch.qos.logback.core.joran.spi.ActionException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.gos.logback.core.ConsoleAppender
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG_FILE] - No encoder set for the appender named "DEBUG_FILE".
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:341)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:346)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:341)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:340)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:263)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:256)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:255)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:107)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:71)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+09:19:54.164 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5276d6ee] to prepare test instance [ru.basanov.subscriber.SubscriberApplicationTests@409c54f]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:341)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:346)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:341)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:340)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:263)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:256)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:255)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:107)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:71)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderAction - Could not create an Appender of type [ch.gos.logback.core.ConsoleAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.gos.logback.core.ConsoleAppender
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@8:73 - ActionException in Action for tag [appender] ch.qos.logback.core.joran.spi.ActionException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.gos.logback.core.ConsoleAppender
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG_FILE] - No encoder set for the appender named "DEBUG_FILE".
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 65 common frames omitted
+09:25:59.148 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.AppenderAction - Could not create an Appender of type [ch.gos.logback.core.ConsoleAppender]. ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.gos.logback.core.ConsoleAppender
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@8:73 - ActionException in Action for tag [appender] ch.qos.logback.core.joran.spi.ActionException: ch.qos.logback.core.util.DynamicClassLoadingException: Failed to instantiate type ch.gos.logback.core.ConsoleAppender
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG_FILE] - No encoder set for the appender named "DEBUG_FILE".
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [STDOUT]. Did you define it below instead of above in the configuration file?
+ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at ru.basanov.subscriber.SubscriberApplication.main(SubscriberApplication.java:10)
+09:29:46.611 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG_FILE] - No encoder set for the appender named "DEBUG_FILE".
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at ru.basanov.subscriber.SubscriberApplication.main(SubscriberApplication.java:10)
+09:36:17.218 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[DEBUG_FILE] - No encoder set for the appender named "DEBUG_FILE".
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:169)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:222)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:118)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:306)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at ru.basanov.subscriber.SubscriberApplication.main(SubscriberApplication.java:10)
+09:39:38.998 [main] WARN  o.s.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+09:39:44.005 [main] INFO  r.b.subscriber.SubscriberApplication - Starting SubscriberApplication on iMac-Mingian.local with PID 1293 (/Users/mingianbasanov/IdeaProjects/subscriber/target/classes started by mingianbasanov in /Users/mingianbasanov/IdeaProjects/subscriber)
+09:39:44.023 [main] INFO  r.b.subscriber.SubscriberApplication - No active profile set, falling back to default profiles: default
+09:39:46.063 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+09:39:46.078 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+09:39:46.162 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.ActionRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+09:39:46.163 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.PurchaseRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+09:39:46.164 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62ms. Found 0 JDBC repository interfaces.
+09:39:46.184 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+09:39:46.184 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+09:39:46.249 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54ms. Found 2 JPA repository interfaces.
+09:39:46.766 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+09:39:46.779 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+09:39:46.782 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+09:39:46.988 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:39:47.030 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:39:47.032 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:39:47.406 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8189 (http)
+09:39:47.415 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8189"]
+09:39:47.416 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:39:47.416 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+09:39:47.690 [main] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring embedded WebApplicationContext
+09:39:47.690 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3458 ms
+09:39:48.057 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+09:39:48.212 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+09:39:48.375 [task-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:39:48.762 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.15.Final
+09:39:48.995 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:39:49.353 [task-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+09:39:49.530 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:39:50.169 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:39:50.387 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+09:39:52.082 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:39:52.097 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:39:53.194 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+09:39:53.202 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+09:39:53.202 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+09:39:53.202 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+09:39:53.202 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 1 subscriber(s).
+09:39:53.203 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'actionListener.handler.serviceActivator'
+09:39:53.203 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+09:39:53.203 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 1 subscriber(s).
+09:39:53.203 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'nullableListener.handler.serviceActivator'
+09:39:53.203 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+09:39:53.203 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 1 subscriber(s).
+09:39:53.203 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'purchaseListener.handler.serviceActivator'
+09:39:53.203 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+09:39:53.203 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 1 subscriber(s).
+09:39:53.203 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'welcomeRouter.route.router'
+09:39:53.203 [main] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'welcomeMessageGateway'
+09:39:53.203 [main] INFO  o.s.i.g.GatewayProxyFactoryBean - started bean 'welcomeMessageGateway'
+09:39:53.203 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8189"]
+09:39:53.259 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8189 (http) with context path '/subscriber'
+09:39:53.260 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+09:39:53.367 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+09:39:53.375 [main] INFO  r.b.subscriber.SubscriberApplication - Started SubscriberApplication in 29.83 seconds (JVM running for 35.861)
+09:41:24.090 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'welcomeMessageGateway'
+09:41:24.091 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean - stopped bean 'welcomeMessageGateway'
+09:41:24.092 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+09:41:24.092 [SpringContextShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 0 subscriber(s).
+09:41:24.092 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+09:41:24.092 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+09:41:24.092 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 0 subscriber(s).
+09:41:24.092 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'actionListener.handler.serviceActivator'
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 0 subscriber(s).
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'nullableListener.handler.serviceActivator'
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 0 subscriber(s).
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'purchaseListener.handler.serviceActivator'
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 0 subscriber(s).
+09:41:24.093 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'welcomeRouter.route.router'
+09:41:24.095 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:41:24.096 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+09:41:24.096 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+09:41:24.096 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:41:24.099 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+09:43:31.101 [main] WARN  o.s.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+09:43:36.124 [main] INFO  r.b.subscriber.SubscriberApplication - Starting SubscriberApplication on iMac-Mingian.local with PID 1381 (/Users/mingianbasanov/IdeaProjects/subscriber/target/classes started by mingianbasanov in /Users/mingianbasanov/IdeaProjects/subscriber)
+09:43:36.125 [main] INFO  r.b.subscriber.SubscriberApplication - No active profile set, falling back to default profiles: default
+09:43:37.203 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+09:43:37.217 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+09:43:37.281 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.ActionRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+09:43:37.282 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.PurchaseRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+09:43:37.282 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40ms. Found 0 JDBC repository interfaces.
+09:43:37.302 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+09:43:37.303 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+09:43:37.338 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29ms. Found 2 JPA repository interfaces.
+09:43:37.550 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+09:43:37.555 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+09:43:37.557 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+09:43:37.642 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:43:37.660 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:43:37.661 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:43:37.816 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8189 (http)
+09:43:37.823 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8189"]
+09:43:37.824 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:43:37.824 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+09:43:37.972 [main] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring embedded WebApplicationContext
+09:43:37.972 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1820 ms
+09:43:38.329 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+09:43:38.360 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+09:43:38.607 [task-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+09:43:38.771 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.15.Final
+09:43:38.952 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09:43:39.250 [task-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+09:43:39.467 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:43:39.710 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:43:39.751 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+09:43:40.557 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+09:43:40.579 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09:43:41.349 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+09:43:41.350 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+09:43:41.350 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 1 subscriber(s).
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'actionListener.handler.serviceActivator'
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+09:43:41.350 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 1 subscriber(s).
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'nullableListener.handler.serviceActivator'
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+09:43:41.350 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 1 subscriber(s).
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'purchaseListener.handler.serviceActivator'
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+09:43:41.350 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 1 subscriber(s).
+09:43:41.350 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'welcomeRouter.route.router'
+09:43:41.350 [main] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'welcomeMessageGateway'
+09:43:41.350 [main] INFO  o.s.i.g.GatewayProxyFactoryBean - started bean 'welcomeMessageGateway'
+09:43:41.350 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8189"]
+09:43:41.375 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8189 (http) with context path '/subscriber'
+09:43:41.377 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+09:43:41.425 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+09:43:41.432 [main] INFO  r.b.subscriber.SubscriberApplication - Started SubscriberApplication in 25.713 seconds (JVM running for 31.528)
+09:44:05.778 [http-nio-8189-exec-1] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:44:05.779 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:44:05.785 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+09:44:06.006 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+09:44:06.008 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+09:44:06.471 [http-nio-8189-exec-1] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+09:44:15.287 [http-nio-8189-exec-2] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+09:44:27.751 [http-nio-8189-exec-3] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+09:44:29.425 [http-nio-8189-exec-4] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+09:44:29.468 [http-nio-8189-exec-4] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+09:44:31.769 [http-nio-8189-exec-5] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+09:44:33.703 [http-nio-8189-exec-6] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+09:45:39.326 [http-nio-8189-exec-8] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+09:48:09.654 [http-nio-8189-exec-10] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+09:48:18.590 [http-nio-8189-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+09:48:28.215 [http-nio-8189-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+09:49:28.560 [http-nio-8189-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+09:49:51.555 [http-nio-8189-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+09:52:57.033 [http-nio-8189-exec-8] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+09:53:04.811 [http-nio-8189-exec-9] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+09:53:52.219 [http-nio-8189-exec-10] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+09:54:00.148 [http-nio-8189-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `ru.basanov.subscriber.dto.ActionEnum` from String "NULL": not one of the values accepted for Enum class: [PURCHASE, ACTION]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `ru.basanov.subscriber.dto.ActionEnum` from String "NULL": not one of the values accepted for Enum class: [PURCHASE, ACTION]
+ at [Source: (PushbackInputStream); line: 1, column: 55] (through reference chain: ru.basanov.subscriber.dto.ActionMessage["actionEnum"])]
+09:58:48.114 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'welcomeMessageGateway'
+09:58:48.114 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean - stopped bean 'welcomeMessageGateway'
+09:58:48.114 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+09:58:48.114 [SpringContextShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 0 subscriber(s).
+09:58:48.114 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+09:58:48.114 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+09:58:48.114 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 0 subscriber(s).
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'actionListener.handler.serviceActivator'
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 0 subscriber(s).
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'nullableListener.handler.serviceActivator'
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 0 subscriber(s).
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'purchaseListener.handler.serviceActivator'
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 0 subscriber(s).
+09:58:48.115 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'welcomeRouter.route.router'
+09:58:48.117 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+09:58:48.118 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+09:58:48.119 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+09:58:48.119 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+09:58:48.121 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+10:32:20.661 [main] WARN  o.s.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+10:32:25.845 [main] INFO  r.b.subscriber.SubscriberApplication - Starting SubscriberApplication on iMac-Mingian.local with PID 1832 (/Users/mingianbasanov/IdeaProjects/subscriber/target/classes started by mingianbasanov in /Users/mingianbasanov/IdeaProjects/subscriber)
+10:32:25.845 [main] INFO  r.b.subscriber.SubscriberApplication - No active profile set, falling back to default profiles: default
+10:32:26.825 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+10:32:26.826 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+10:32:26.892 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.ActionRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+10:32:26.894 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.PurchaseRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+10:32:26.894 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40ms. Found 0 JDBC repository interfaces.
+10:32:26.914 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+10:32:26.914 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+10:32:26.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34ms. Found 2 JPA repository interfaces.
+10:32:27.155 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+10:32:27.161 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+10:32:27.164 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+10:32:27.258 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:32:27.272 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:32:27.274 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:32:27.482 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8189 (http)
+10:32:27.488 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8189"]
+10:32:27.488 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+10:32:27.489 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+10:32:27.833 [main] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring embedded WebApplicationContext
+10:32:27.833 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1961 ms
+10:32:28.207 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:32:28.239 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+10:32:28.440 [task-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10:32:28.672 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.15.Final
+10:32:28.828 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:32:29.229 [task-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+10:32:29.396 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:32:29.678 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:32:29.770 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10:32:30.874 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10:32:30.910 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:32:31.682 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+10:32:31.683 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+10:32:31.683 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 1 subscriber(s).
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'actionListener.handler.serviceActivator'
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+10:32:31.683 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 1 subscriber(s).
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'nullableListener.handler.serviceActivator'
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+10:32:31.683 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 1 subscriber(s).
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'purchaseListener.handler.serviceActivator'
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+10:32:31.683 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 1 subscriber(s).
+10:32:31.683 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'welcomeRouter.route.router'
+10:32:31.683 [main] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'welcomeMessageGateway'
+10:32:31.683 [main] INFO  o.s.i.g.GatewayProxyFactoryBean - started bean 'welcomeMessageGateway'
+10:32:31.683 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8189"]
+10:32:31.707 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8189 (http) with context path '/subscriber'
+10:32:31.708 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+10:32:31.760 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+10:32:31.767 [main] INFO  r.b.subscriber.SubscriberApplication - Started SubscriberApplication in 26.547 seconds (JVM running for 32.8)
+10:33:32.048 [http-nio-8189-exec-1] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:33:32.059 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10:33:32.066 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+10:33:32.262 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+10:33:32.269 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+10:34:47.071 [http-nio-8189-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+10:35:12.305 [http-nio-8189-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+10:37:01.149 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'welcomeMessageGateway'
+10:37:01.189 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean - stopped bean 'welcomeMessageGateway'
+10:37:01.190 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+10:37:01.190 [SpringContextShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 0 subscriber(s).
+10:37:01.190 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+10:37:01.190 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+10:37:01.190 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 0 subscriber(s).
+10:37:01.190 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'actionListener.handler.serviceActivator'
+10:37:01.190 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+10:37:01.191 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 0 subscriber(s).
+10:37:01.191 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'nullableListener.handler.serviceActivator'
+10:37:01.191 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+10:37:01.191 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 0 subscriber(s).
+10:37:01.191 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'purchaseListener.handler.serviceActivator'
+10:37:01.191 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+10:37:01.191 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 0 subscriber(s).
+10:37:01.191 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'welcomeRouter.route.router'
+10:37:01.193 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:37:01.195 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+10:37:01.195 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:37:01.195 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+10:37:01.198 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+10:39:00.933 [main] WARN  o.s.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+10:39:05.938 [main] INFO  r.b.subscriber.SubscriberApplication - Starting SubscriberApplication on iMac-Mingian.local with PID 1912 (/Users/mingianbasanov/IdeaProjects/subscriber/target/classes started by mingianbasanov in /Users/mingianbasanov/IdeaProjects/subscriber)
+10:39:05.960 [main] INFO  r.b.subscriber.SubscriberApplication - No active profile set, falling back to default profiles: default
+10:39:06.574 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+10:39:06.574 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+10:39:06.603 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.ActionRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+10:39:06.604 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.PurchaseRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+10:39:06.605 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27ms. Found 0 JDBC repository interfaces.
+10:39:06.610 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+10:39:06.610 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+10:39:06.637 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 2 JPA repository interfaces.
+10:39:06.773 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+10:39:06.778 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+10:39:06.781 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+10:39:06.847 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:39:06.852 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:39:06.854 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:39:07.048 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8189 (http)
+10:39:07.055 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8189"]
+10:39:07.055 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+10:39:07.056 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+10:39:07.143 [main] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring embedded WebApplicationContext
+10:39:07.144 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1155 ms
+10:39:07.302 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:39:07.332 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+10:39:07.391 [task-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10:39:07.423 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.15.Final
+10:39:07.519 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:39:07.555 [task-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+10:39:07.614 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:39:07.766 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:39:07.775 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10:39:08.113 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10:39:08.118 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:39:08.541 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+10:39:08.542 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+10:39:08.542 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 1 subscriber(s).
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'actionListener.handler.serviceActivator'
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+10:39:08.542 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 1 subscriber(s).
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'nullableListener.handler.serviceActivator'
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+10:39:08.542 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 1 subscriber(s).
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'purchaseListener.handler.serviceActivator'
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+10:39:08.542 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 1 subscriber(s).
+10:39:08.542 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'welcomeRouter.route.router'
+10:39:08.542 [main] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'welcomeMessageGateway'
+10:39:08.542 [main] INFO  o.s.i.g.GatewayProxyFactoryBean - started bean 'welcomeMessageGateway'
+10:39:08.543 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8189"]
+10:39:08.567 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8189 (http) with context path '/subscriber'
+10:39:08.569 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+10:39:08.598 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+10:39:08.605 [main] INFO  r.b.subscriber.SubscriberApplication - Started SubscriberApplication in 22.892 seconds (JVM running for 29.078)
+10:40:23.589 [http-nio-8189-exec-1] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:40:23.597 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10:40:23.603 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+10:40:23.697 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+10:40:23.719 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+10:41:05.777 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'welcomeMessageGateway'
+10:41:05.788 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean - stopped bean 'welcomeMessageGateway'
+10:41:05.788 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+10:41:05.788 [SpringContextShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 0 subscriber(s).
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 0 subscriber(s).
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'actionListener.handler.serviceActivator'
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 0 subscriber(s).
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'nullableListener.handler.serviceActivator'
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 0 subscriber(s).
+10:41:05.789 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'purchaseListener.handler.serviceActivator'
+10:41:05.790 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+10:41:05.790 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 0 subscriber(s).
+10:41:05.790 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'welcomeRouter.route.router'
+10:41:05.792 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:41:05.793 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+10:41:05.793 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:41:05.794 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+10:41:05.796 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+10:42:05.032 [main] WARN  o.s.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+10:42:10.036 [main] INFO  r.b.subscriber.SubscriberApplication - Starting SubscriberApplication on iMac-Mingian.local with PID 1952 (/Users/mingianbasanov/IdeaProjects/subscriber/target/classes started by mingianbasanov in /Users/mingianbasanov/IdeaProjects/subscriber)
+10:42:10.036 [main] INFO  r.b.subscriber.SubscriberApplication - No active profile set, falling back to default profiles: default
+10:42:10.670 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+10:42:10.671 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+10:42:10.697 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.ActionRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+10:42:10.698 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.PurchaseRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+10:42:10.698 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 0 JDBC repository interfaces.
+10:42:10.708 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+10:42:10.709 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+10:42:10.736 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25ms. Found 2 JPA repository interfaces.
+10:42:10.871 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+10:42:10.877 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+10:42:10.879 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+10:42:10.949 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:42:10.955 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:42:10.956 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:42:11.112 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8189 (http)
+10:42:11.117 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8189"]
+10:42:11.118 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+10:42:11.118 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+10:42:11.208 [main] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring embedded WebApplicationContext
+10:42:11.208 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1144 ms
+10:42:11.344 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+10:42:11.387 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+10:42:11.415 [task-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10:42:11.446 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.15.Final
+10:42:11.490 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:42:11.571 [task-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+10:42:11.631 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:42:11.679 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:42:11.689 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10:42:12.021 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10:42:12.027 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:42:12.465 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+10:42:12.466 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+10:42:12.466 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+10:42:12.466 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+10:42:12.466 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 1 subscriber(s).
+10:42:12.466 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'actionListener.handler.serviceActivator'
+10:42:12.466 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+10:42:12.466 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 1 subscriber(s).
+10:42:12.466 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'nullableListener.handler.serviceActivator'
+10:42:12.466 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+10:42:12.466 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 1 subscriber(s).
+10:42:12.466 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'purchaseListener.handler.serviceActivator'
+10:42:12.466 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+10:42:12.466 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 1 subscriber(s).
+10:42:12.467 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'welcomeRouter.route.router'
+10:42:12.467 [main] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'welcomeMessageGateway'
+10:42:12.467 [main] INFO  o.s.i.g.GatewayProxyFactoryBean - started bean 'welcomeMessageGateway'
+10:42:12.467 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8189"]
+10:42:12.491 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8189 (http) with context path '/subscriber'
+10:42:12.492 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+10:42:12.522 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+10:42:12.529 [main] INFO  r.b.subscriber.SubscriberApplication - Started SubscriberApplication in 22.744 seconds (JVM running for 28.839)
+10:42:31.253 [http-nio-8189-exec-1] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10:42:31.269 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10:42:31.275 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+10:42:31.357 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+10:42:31.358 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+10:42:31.637 [http-nio-8189-exec-1] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+10:42:40.413 [http-nio-8189-exec-2] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+10:42:40.420 [http-nio-8189-exec-2] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+10:43:04.875 [http-nio-8189-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+10:44:36.937 [http-nio-8189-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+10:45:06.534 [http-nio-8189-exec-7] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'applicatio/json;charset=UTF-8' not supported]
+10:45:26.390 [http-nio-8189-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'applicatio/json;charset=UTF-8' not supported]
+10:45:37.185 [http-nio-8189-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `ru.basanov.subscriber.dto.ActionEnum` from String "null": not one of the values accepted for Enum class: [PURCHASE, ACTION]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `ru.basanov.subscriber.dto.ActionEnum` from String "null": not one of the values accepted for Enum class: [PURCHASE, ACTION]
+ at [Source: (PushbackInputStream); line: 1, column: 56] (through reference chain: ru.basanov.subscriber.dto.ActionMessage["actionEnum"])]
+10:46:34.137 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'welcomeMessageGateway'
+10:46:34.137 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean - stopped bean 'welcomeMessageGateway'
+10:46:34.137 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+10:46:34.137 [SpringContextShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 0 subscriber(s).
+10:46:34.137 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+10:46:34.137 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+10:46:34.137 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 0 subscriber(s).
+10:46:34.137 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'actionListener.handler.serviceActivator'
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 0 subscriber(s).
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'nullableListener.handler.serviceActivator'
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 0 subscriber(s).
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'purchaseListener.handler.serviceActivator'
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 0 subscriber(s).
+10:46:34.138 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'welcomeRouter.route.router'
+10:46:34.140 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:46:34.141 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+10:46:34.141 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+10:46:34.141 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+10:46:34.144 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:00:03.258 [main] WARN  o.s.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+11:00:08.285 [main] INFO  r.b.subscriber.SubscriberApplication - Starting SubscriberApplication on iMac-Mingian.local with PID 2104 (/Users/mingianbasanov/IdeaProjects/subscriber/target/classes started by mingianbasanov in /Users/mingianbasanov/IdeaProjects/subscriber)
+11:00:08.294 [main] INFO  r.b.subscriber.SubscriberApplication - No active profile set, falling back to default profiles: default
+11:00:09.336 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+11:00:09.336 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+11:00:09.401 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.ActionRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+11:00:09.402 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.PurchaseRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+11:00:09.402 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38ms. Found 0 JDBC repository interfaces.
+11:00:09.435 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+11:00:09.436 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+11:00:09.477 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27ms. Found 2 JPA repository interfaces.
+11:00:09.669 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+11:00:09.675 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+11:00:09.678 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+11:00:09.769 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:00:09.775 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:00:09.777 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:00:09.961 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8189 (http)
+11:00:09.967 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8189"]
+11:00:09.967 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:00:09.967 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+11:00:10.158 [main] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring embedded WebApplicationContext
+11:00:10.158 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1835 ms
+11:00:10.852 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+11:00:10.883 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+11:00:11.121 [task-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:00:11.175 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.15.Final
+11:00:11.547 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:00:11.850 [task-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+11:00:11.940 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:00:12.133 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:00:12.163 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+11:00:12.820 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:00:12.838 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:00:13.643 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+11:00:13.643 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+11:00:13.643 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+11:00:13.643 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+11:00:13.643 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 1 subscriber(s).
+11:00:13.643 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'actionListener.handler.serviceActivator'
+11:00:13.644 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+11:00:13.644 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 1 subscriber(s).
+11:00:13.644 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'nullableListener.handler.serviceActivator'
+11:00:13.644 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+11:00:13.644 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 1 subscriber(s).
+11:00:13.644 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'purchaseListener.handler.serviceActivator'
+11:00:13.644 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+11:00:13.644 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 1 subscriber(s).
+11:00:13.644 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'welcomeRouter.route.router'
+11:00:13.644 [main] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'welcomeMessageGateway'
+11:00:13.644 [main] INFO  o.s.i.g.GatewayProxyFactoryBean - started bean 'welcomeMessageGateway'
+11:00:13.644 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8189"]
+11:00:13.668 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8189 (http) with context path '/subscriber'
+11:00:13.669 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+11:00:13.791 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+11:00:13.821 [main] INFO  r.b.subscriber.SubscriberApplication - Started SubscriberApplication in 25.848 seconds (JVM running for 31.748)
+11:00:22.136 [http-nio-8189-exec-1] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:00:22.146 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:00:22.152 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+11:00:22.355 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+11:00:22.358 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+11:00:22.514 [http-nio-8189-exec-1] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+11:00:27.546 [http-nio-8189-exec-2] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+11:00:27.595 [http-nio-8189-exec-2] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+11:00:32.361 [http-nio-8189-exec-3] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+11:00:44.519 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'welcomeMessageGateway'
+11:00:44.536 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean - stopped bean 'welcomeMessageGateway'
+11:00:44.536 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+11:00:44.536 [SpringContextShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 0 subscriber(s).
+11:00:44.536 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+11:00:44.536 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 0 subscriber(s).
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'actionListener.handler.serviceActivator'
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:nullableListener.handler.serviceActivator} as a subscriber to the 'nullableChannel' channel
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.nullableChannel' has 0 subscriber(s).
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'nullableListener.handler.serviceActivator'
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 0 subscriber(s).
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'purchaseListener.handler.serviceActivator'
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+11:00:44.537 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 0 subscriber(s).
+11:00:44.538 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'welcomeRouter.route.router'
+11:00:44.540 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:00:44.541 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+11:00:44.542 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+11:00:44.542 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:00:44.545 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:20:41.284 [main] WARN  o.s.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+11:20:46.288 [main] INFO  r.b.subscriber.SubscriberApplication - Starting SubscriberApplication on iMac-Mingian.local with PID 2261 (/Users/mingianbasanov/IdeaProjects/subscriber/target/classes started by mingianbasanov in /Users/mingianbasanov/IdeaProjects/subscriber)
+11:20:46.289 [main] INFO  r.b.subscriber.SubscriberApplication - No active profile set, falling back to default profiles: default
+11:20:47.309 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+11:20:47.316 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+11:20:47.373 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.ActionRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+11:20:47.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.basanov.subscriber.repository.PurchaseRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+11:20:47.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29ms. Found 0 JDBC repository interfaces.
+11:20:47.394 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+11:20:47.394 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+11:20:47.426 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27ms. Found 2 JPA repository interfaces.
+11:20:47.603 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+11:20:47.608 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+11:20:47.610 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+11:20:47.725 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:20:47.730 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:20:47.731 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:20:47.908 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8189 (http)
+11:20:47.914 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8189"]
+11:20:47.914 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:20:47.914 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+11:20:48.081 [main] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring embedded WebApplicationContext
+11:20:48.081 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1766 ms
+11:20:48.399 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+11:20:48.430 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+11:20:48.564 [task-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:20:48.613 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.15.Final
+11:20:48.834 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:20:49.088 [task-1] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+11:20:49.147 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:20:49.614 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:20:49.627 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+11:20:50.245 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:20:50.250 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:20:50.927 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+11:20:50.943 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+11:20:50.943 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+11:20:50.943 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+11:20:50.943 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 1 subscriber(s).
+11:20:50.943 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'actionListener.handler.serviceActivator'
+11:20:50.943 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+11:20:50.943 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 1 subscriber(s).
+11:20:50.943 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'purchaseListener.handler.serviceActivator'
+11:20:50.943 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+11:20:50.943 [main] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 1 subscriber(s).
+11:20:50.944 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'welcomeRouter.route.router'
+11:20:50.944 [main] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'welcomeMessageGateway'
+11:20:50.944 [main] INFO  o.s.i.g.GatewayProxyFactoryBean - started bean 'welcomeMessageGateway'
+11:20:50.944 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8189"]
+11:20:50.968 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8189 (http) with context path '/subscriber'
+11:20:50.969 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+11:20:51.030 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+11:20:51.037 [main] INFO  r.b.subscriber.SubscriberApplication - Started SubscriberApplication in 25.031 seconds (JVM running for 30.992)
+11:21:26.417 [http-nio-8189-exec-1] INFO  o.a.c.c.C.[.[.[/subscriber] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:21:26.417 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:21:26.422 [http-nio-8189-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+11:21:26.545 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+11:21:26.546 [http-nio-8189-exec-1] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+11:21:26.747 [http-nio-8189-exec-1] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+11:21:34.135 [http-nio-8189-exec-2] INFO  r.b.s.integration.ActionListener - Добавлена запись в таблицу action
+11:21:46.111 [http-nio-8189-exec-3] INFO  o.s.i.h.s.MessagingMethodInvokerHelper - Overriding default instance of MessageHandlerMethodFactory with provided one.
+11:21:46.119 [http-nio-8189-exec-3] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+11:21:47.694 [http-nio-8189-exec-4] INFO  r.b.s.integration.PurchaseListener - Добавлена запись в таблицу purchase
+11:21:57.635 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'welcomeMessageGateway'
+11:21:57.635 [SpringContextShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean - stopped bean 'welcomeMessageGateway'
+11:21:57.635 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+11:21:57.635 [SpringContextShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 0 subscriber(s).
+11:21:57.635 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:actionListener.handler.serviceActivator} as a subscriber to the 'actionChannel' channel
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.actionChannel' has 0 subscriber(s).
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'actionListener.handler.serviceActivator'
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {service-activator:purchaseListener.handler.serviceActivator} as a subscriber to the 'purchaseChannel' channel
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.purchaseChannel' has 0 subscriber(s).
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'purchaseListener.handler.serviceActivator'
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {router:welcomeRouter.route.router} as a subscriber to the 'welcomeChannel' channel
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'application.welcomeChannel' has 0 subscriber(s).
+11:21:57.636 [SpringContextShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'welcomeRouter.route.router'
+11:21:57.638 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:21:57.639 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+11:21:57.639 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+11:21:57.639 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:21:57.642 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
